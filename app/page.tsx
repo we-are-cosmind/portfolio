@@ -1,6 +1,7 @@
 "use client"
 
-import { ArrowRight, Monitor, Palette, Smartphone, Users } from "lucide-react"
+import { Monitor, Palette, Smartphone, Users } from "lucide-react"
+import { useEffect, useState } from "react"
 
 import BrainIcon from "@/components/brain-icon"
 import { Button } from "@/components/ui/button"
@@ -8,21 +9,66 @@ import CalendlyModal from "@/components/calendly-modal"
 import ContactForm from "@/components/contact-form"
 import FadeIn from "@/components/fade-in"
 import FloatingElements from "@/components/floating-elements"
+import Image from "next/image"
 import Navbar from "@/components/navbar"
 import Typewriter from "@/components/typewriter"
 import { useLanguage } from "@/contexts/language-context"
-import { useState } from "react"
 
 export default function Home() {
   const { t } = useLanguage()
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false)
-
+  const [_scrolled, setScrolled] = useState(false)
+  const [_mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const logos = [
+    "/assets/marca1.png",
+    "/assets/marca2.jpg",
+    "/assets/marca3.png",
+    "/assets/marca4.jpeg",
+    "/assets/marca5.png",
+    "/assets/marca6.png",
+    "/assets/marca8.jpg",
+    "/assets/marca9.jpg",
+    "/assets/marca10.png",
+    "/assets/marca11.jpg",
+    "/assets/marca12.jpg",
+    "/assets/marca13.png",
+  ];
+  
   const openCalendly = () => {
     setIsCalendlyOpen(true)
   }
 
   const closeCalendly = () => {
     setIsCalendlyOpen(false)
+  }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
+  const scrollToSection = (sectionId: string) => {
+    setMobileMenuOpen(false)
+
+    if (sectionId === "#contact") {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })
+      return
+    }
+    
+    const element = document.getElementById(sectionId.substring(1))
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (
@@ -35,8 +81,8 @@ export default function Home() {
       <section className="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-5xl mx-auto w-full pt-20 pb-32">
           <FadeIn delay={300}>
-            <div className="flex items-center justify-start gap-12 mb-10">
-              <h1 className="text-5xl md:text-7xl font-bold text-white">Cosmind</h1>
+            <div className="flex items-center justify-start gap-4 mb-10">
+              <h1 className="text-5xl md:text-7xl font-bold text-white">{t('hero.banner')}</h1>
               <div className="">
               <BrainIcon />
               </div>
@@ -188,78 +234,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+{/* Trusted By Section */}
+<section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+  <div className="max-w-7xl mx-auto text-center">
+    <FadeIn>
+      <h2 className="text-4xl font-bold text-navy-900 mb-4">{t("successCases.title")}</h2>
+      <div className="h-1 w-24 bg-navy-500 mx-auto mb-6"></div>
+      <p className="text-xl text-navy-700">{t("successCases.subtitle")}</p>
+    </FadeIn>
 
-      {/* Success Cases Section */}
-      <section id="success-cases" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <FadeIn>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-navy-900 mb-4">{t("successCases.title")}</h2>
-              <div className="h-1 w-24 bg-navy-500 mx-auto mb-6"></div>
-              <p className="text-xl text-navy-700">{t("successCases.subtitle")}</p>
-            </div>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Project 1 */}
-            <FadeIn delay={100} direction="up">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="h-48 bg-gradient-to-r from-navy-500 to-navy-700 flex items-center justify-center">
-                  <span className="text-white text-4xl font-bold">01</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy-900 mb-2">{t("successCases.project1")}</h3>
-                  <p className="text-navy-700 mb-4">{t("successCases.project1.desc")}</p>
-                  <button
-                    onClick={openCalendly}
-                    className="inline-flex items-center text-navy-600 hover:text-navy-800 transition-colors"
-                  >
-                    View Case Study <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Project 2 */}
-            <FadeIn delay={200} direction="up">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="h-48 bg-gradient-to-r from-navy-700 to-navy-500 flex items-center justify-center">
-                  <span className="text-white text-4xl font-bold">02</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy-900 mb-2">{t("successCases.project2")}</h3>
-                  <p className="text-navy-700 mb-4">{t("successCases.project2.desc")}</p>
-                  <button
-                    onClick={openCalendly}
-                    className="inline-flex items-center text-navy-600 hover:text-navy-800 transition-colors"
-                  >
-                    View Case Study <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Project 3 */}
-            <FadeIn delay={300} direction="up">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                <div className="h-48 bg-gradient-to-r from-navy-500 to-navy-700 flex items-center justify-center">
-                  <span className="text-white text-4xl font-bold">03</span>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-navy-900 mb-2">{t("successCases.project3")}</h3>
-                  <p className="text-navy-700 mb-4">{t("successCases.project3.desc")}</p>
-                  <button
-                    onClick={openCalendly}
-                    className="inline-flex items-center text-navy-600 hover:text-navy-800 transition-colors"
-                  >
-                    View Case Study <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+    <div className="mt-12 overflow-hidden relative">
+  <div className="flex w-max animate-scroll-x space-x-12">
+    {logos.map((logo, idx) => (
+      <img
+        key={`logo-${idx}`}
+        src={logo}
+        alt={`Client ${idx + 1}`}
+        className="h-12 w-auto grayscale hover:grayscale-0 transition duration-300"
+      />
+    ))}
+    {logos.map((logo, idx) => (
+      <img
+        key={`logo-duplicate-${idx}`}
+        src={logo}
+        alt={`Client Duplicate ${idx + 1}`}
+        className="h-12 w-auto grayscale hover:grayscale-0 transition duration-300"
+      />
+    ))}
+  </div>
+</div>
+  </div>
+</section>
 
       {/* About Us Section */}
       <section id="about-us" className="py-24 px-4 sm:px-6 lg:px-8 bg-navy-50">
@@ -286,19 +291,19 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <h4 className="text-xl font-semibold text-navy-700 mb-2">{t("aboutUs.value1")}</h4>
-                    <p className="text-navy-600">We embrace new ideas and technologies to stay ahead.</p>
+                    <p className="text-navy-600">{t("aboutUs.desc1")}</p>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <h4 className="text-xl font-semibold text-navy-700 mb-2">{t("aboutUs.value2")}</h4>
-                    <p className="text-navy-600">We deliver excellence in everything we do.</p>
+                    <p className="text-navy-600">{t("aboutUs.desc2")}</p>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <h4 className="text-xl font-semibold text-navy-700 mb-2">{t("aboutUs.value3")}</h4>
-                    <p className="text-navy-600">We work together to achieve common goals.</p>
+                    <p className="text-navy-600">{t("aboutUs.desc3")}</p>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <h4 className="text-xl font-semibold text-navy-700 mb-2">{t("aboutUs.value4")}</h4>
-                    <p className="text-navy-600">We act with honesty and transparency.</p>
+                    <p className="text-navy-600">{t("aboutUs.desc3")}</p>
                   </div>
                 </div>
               </div>
@@ -323,8 +328,8 @@ export default function Home() {
               <div>
                 <p className="text-navy-700 text-lg mb-8">{t("career.description")}</p>
                 <Button
-                  onClick={openCalendly}
-                  className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-2 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
+              onClick={() => scrollToSection("#contact")}
+              className="bg-navy-600 hover:bg-navy-700 text-white px-6 py-2 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
                 >
                   {t("career.applyBtn")}
                 </Button>
@@ -338,32 +343,14 @@ export default function Home() {
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <h4 className="text-xl font-semibold text-navy-900 mb-2">{t("career.position1")}</h4>
                     <p className="text-navy-700 mb-4">React, Next.js, TypeScript</p>
-                    <button
-                      onClick={openCalendly}
-                      className="inline-flex items-center text-navy-600 hover:text-navy-800 transition-colors"
-                    >
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </button>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <h4 className="text-xl font-semibold text-navy-900 mb-2">{t("career.position2")}</h4>
                     <p className="text-navy-700 mb-4">Figma, Adobe XD, User Research</p>
-                    <button
-                      onClick={openCalendly}
-                      className="inline-flex items-center text-navy-600 hover:text-navy-800 transition-colors"
-                    >
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </button>
                   </div>
                   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <h4 className="text-xl font-semibold text-navy-900 mb-2">{t("career.position3")}</h4>
                     <p className="text-navy-700 mb-4">React Native, Flutter, Swift</p>
-                    <button
-                      onClick={openCalendly}
-                      className="inline-flex items-center text-navy-600 hover:text-navy-800 transition-colors"
-                    >
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </button>
                   </div>
                 </div>
               </div>

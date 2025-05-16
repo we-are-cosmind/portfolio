@@ -42,6 +42,12 @@ export default function Navbar({ openCalendly }: NavbarProps) {
 
   const scrollToSection = (sectionId: string) => {
     setMobileMenuOpen(false)
+
+    if (sectionId === "#contact") {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" })
+      return
+    }
+    
     const element = document.getElementById(sectionId.substring(1))
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
@@ -85,7 +91,7 @@ export default function Navbar({ openCalendly }: NavbarProps) {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
           <LanguageSwitcher />
           <Button
-            onClick={openCalendly}
+            onClick={() => scrollToSection('#contact')}
             className="bg-navy-600 hover:bg-navy-700 text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-md"
           >
             {t("nav.contactUs")}

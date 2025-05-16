@@ -21,49 +21,50 @@ const translations = {
     "nav.contactUs": "Contact Us",
 
     // Hero
-    "hero.title": "Exploring the Digital Universe",
+    "hero.banner": "Welcome to Cosmind",
+    "hero.title": "Fueling your growth with top talent & tech",
     "hero.description":
-      "We transform ideas into reality, using technology as a tool and innovation as a driving force.",
-    "hero.cta": "Start your project",
+      "Where ideas are transformed into scalable solutions through skilled people, custom development, and marketing services.",
+    "hero.cta": "Let's talk",
 
     // What We Do
-    "whatWeDo.title": "What We Do",
-    "whatWeDo.subtitle": "Turning Ideas into Digital Solutions",
-    "whatWeDo.webDev": "Web Development",
-    "whatWeDo.webDev.desc": "We create responsive, modern websites and web applications using the latest technologies.",
-    "whatWeDo.mobileDev": "Mobile Development",
-    "whatWeDo.mobileDev.desc": "Native and cross-platform mobile applications for iOS and Android.",
-    "whatWeDo.uiUx": "UI/UX Design",
-    "whatWeDo.uiUx.desc": "User-centered design that creates intuitive and engaging digital experiences.",
+    "whatWeDo.title": "Our Services",
+    "whatWeDo.subtitle": "We boost your team, your brand, and your product",
+    "whatWeDo.webDev": "Custom Development",
+    "whatWeDo.webDev.desc": "We build end-to-end digital solutions tailored to your business — from discovery and prototyping to launch and maintenance.",
+    "whatWeDo.mobileDev": "Digital Marketing",
+    "whatWeDo.mobileDev.desc": "We craft and execute full-funnel strategies focused on performance, growth, and long-term impact.",
+    "whatWeDo.uiUx": "UI/UX & Product Design",
+    "whatWeDo.uiUx.desc": "We design user-centered, intuitive, and visually engaging digital experiences that align with your product vision and business objectives.",
     "whatWeDo.staffAug": "Staff Augmentation",
     "whatWeDo.staffAug.desc":
-      "Extend your team with our skilled professionals to accelerate your projects and reduce time-to-market.",
+      "Seamlessly scale your team with top-tier professionals in development, marketing, UI/UX design, data, QA, DevOps, and more. We align with your culture and business goals from day one.",
     "whatWeDo.consulting": "Tech Consulting",
     "whatWeDo.consulting.desc": "Strategic guidance to help you make the right technology decisions.",
 
     // How We Do It
-    "howWeDoIt.title": "How We Do It",
-    "howWeDoIt.subtitle": "Our Approach to Digital Excellence",
+    "howWeDoIt.title": "How We Work",
+    "howWeDoIt.subtitle": "Clear processes. Real results.",
     "howWeDoIt.step1": "Discovery",
-    "howWeDoIt.step1.desc": "We start by understanding your business, goals, and challenges.",
+    "howWeDoIt.step1.desc": "We dig deep into your needs, company culture, and objectives to craft the right staffing strategy and match the right talent.",
     "howWeDoIt.step2": "Strategy",
-    "howWeDoIt.step2.desc": "We develop a tailored strategy and roadmap for your digital solution.",
-    "howWeDoIt.step3": "Design",
-    "howWeDoIt.step3.desc": "We create intuitive, engaging designs that align with your brand.",
-    "howWeDoIt.step4": "Development",
-    "howWeDoIt.step4.desc": "We build your solution using modern technologies and best practices.",
-    "howWeDoIt.step5": "Launch & Support",
-    "howWeDoIt.step5.desc": "We deploy your solution and provide ongoing support and improvements.",
+    "howWeDoIt.step2.desc": "We tap into our global network to handpick candidates that are not only technically sharp but also a cultural fit for your team.",
+    "howWeDoIt.step3": "Onboarding & Support",
+    "howWeDoIt.step3.desc": "We ensure a smooth and frictionless onboarding process, with ongoing support to help the new talent thrive.",
+    "howWeDoIt.step4": "Execution & Delivery",
+    "howWeDoIt.step4.desc": "Hands on work — developing, bringing, iterating, and optimizing your product using agile methodologies and best practices.",
+    "howWeDoIt.step5": "Continuous Improvement",
+    "howWeDoIt.step5.desc": "We gather feedback, track performance, and make strategic adjustments to keep driving real value to your business.",
 
     // Success Cases
-    "successCases.title": "Success Cases",
-    "successCases.subtitle": "Our Work Speaks for Itself",
-    "successCases.project1": "E-commerce Platform",
+    "successCases.title": "They Trust Us",
+    "successCases.subtitle": "Companies that choose our strategic collaboration model",
+    "successCases.project1": "Qira Global",
     "successCases.project1.desc": "A complete online shopping solution with integrated payment processing.",
-    "successCases.project2": "Healthcare App",
-    "successCases.project2.desc": "Mobile application for patient management and telemedicine.",
-    "successCases.project3": "Financial Dashboard",
-    "successCases.project3.desc": "Real-time analytics dashboard for financial data visualization.",
+    "successCases.project2": "Join Ready",
+    "successCases.project2.desc": "A platform designed to successfully connect professionals with top-tier companies.",
+    "successCases.project3": "Open Labs Latam",
+    "successCases.project3.desc": "An intranet specialized in comprehensive personnel management and AI-based intelligent decision-making.",
 
     // About Us
     "aboutUs.title": "About Us",
@@ -77,6 +78,11 @@ const translations = {
     "aboutUs.value2": "Quality",
     "aboutUs.value3": "Collaboration",
     "aboutUs.value4": "Integrity",
+    "aboutUs.desc1": "We embrace new ideas and technologies to stay ahead.",
+    "aboutUs.desc2": "We deliver excellence in everything we do.",
+    "aboutUs.desc3": "We work together to achieve common goals.",
+    "aboutUs.desc4": "We act with honesty and transparency.",
+
 
     // Your Career
     "career.title": "Your Career",
@@ -111,86 +117,96 @@ const translations = {
     "nav.contactUs": "Contáctanos",
 
     // Hero
-    "hero.title": "Explorando el Universo Digital",
+    "hero.banner": "Bienvenido a Cosmind",
+    "hero.title": "Donde la tecnología acelera el éxito.",
     "hero.description":
-      "Transformamos ideas en realidad, utilizando tecnología como herramienta e innovación como fuerza impulsora.",
-    "hero.cta": "Comienza tu proyecto",
+      "Transformamos ideas en soluciones escalables a través de talento especializado, desarrollos a medida y servicios de marketing.",
+    "hero.cta": "Hablemos",
 
     // What We Do
-    "whatWeDo.title": "Qué Hacemos",
-    "whatWeDo.subtitle": "Convertimos Ideas en Soluciones Digitales",
+    "whatWeDo.title": "Servicios",
+    "whatWeDo.subtitle": "Potenciamos tu equipo, tu marca y tu producto",
     "whatWeDo.webDev": "Desarrollo Web",
     "whatWeDo.webDev.desc":
-      "Creamos sitios web y aplicaciones web modernas y responsivas utilizando las últimas tecnologías.",
-    "whatWeDo.mobileDev": "Desarrollo Móvil",
-    "whatWeDo.mobileDev.desc": "Aplicaciones móviles nativas y multiplataforma para iOS y Android.",
-    "whatWeDo.uiUx": "Diseño UI/UX",
-    "whatWeDo.uiUx.desc": "Diseño centrado en el usuario que crea experiencias digitales intuitivas y atractivas.",
+      "Creamos soluciones tecnológicas end-to-end adaptadas a tu negocio: desde el descubrimiento hasta el mantenimiento post-lanzamiento.",
+    "whatWeDo.mobileDev": "Marketing Digital",
+    "whatWeDo.mobileDev.desc": "Diseñamos e implementamos estrategias de marketing integrales con foco en resultados y crecimiento sostenible.",
+    "whatWeDo.uiUx": "UI/UX y Producto",
+    "whatWeDo.uiUx.desc": "Creamos experiencias digitales funcionales, intuitivas y atractivas, centradas en el usuario y alineadas a tus objetivos de negocio.",
     "whatWeDo.staffAug": "Aumento de Personal",
     "whatWeDo.staffAug.desc":
-      "Amplía tu equipo con nuestros profesionales calificados para acelerar tus proyectos y reducir el tiempo de salida al mercado.",
+      "Incorpora profesionales altamente calificados en programación, marketing, diseño UI/UX, data, QA, DevOps y más. Nos alineamos con tu cultura y objetivos.",
     "whatWeDo.consulting": "Consultoría Tecnológica",
     "whatWeDo.consulting.desc": "Orientación estratégica para ayudarte a tomar las decisiones tecnológicas correctas.",
 
     // How We Do It
-    "howWeDoIt.title": "Cómo lo Hacemos",
-    "howWeDoIt.subtitle": "Nuestro Enfoque hacia la Excelencia Digital",
+    "howWeDoIt.title": "Nuestro Método",
+    "howWeDoIt.subtitle": "Procesos claros. Resultados reales.",
     "howWeDoIt.step1": "Descubrimiento",
-    "howWeDoIt.step1.desc": "Comenzamos por entender tu negocio, objetivos y desafíos.",
-    "howWeDoIt.step2": "Estrategia",
-    "howWeDoIt.step2.desc": "Desarrollamos una estrategia y hoja de ruta personalizada para tu solución digital.",
-    "howWeDoIt.step3": "Diseño",
-    "howWeDoIt.step3.desc": "Creamos diseños intuitivos y atractivos que se alinean con tu marca.",
-    "howWeDoIt.step4": "Desarrollo",
-    "howWeDoIt.step4.desc": "Construimos tu solución utilizando tecnologías modernas y mejores prácticas.",
-    "howWeDoIt.step5": "Lanzamiento y Soporte",
-    "howWeDoIt.step5.desc": "Implementamos tu solución y proporcionamos soporte y mejoras continuas.",
+    "howWeDoIt.step1.desc": "Analizamos necesidades, cultura y objetivos para encontrar la solución adecuada y el talento ideal.",
+    "howWeDoIt.step2": "Selección estratégica",
+    "howWeDoIt.step2.desc": "Activamos la red global y seleccionamos perfiles que encajan técnica y culturalmente con tu equipo.",
+    "howWeDoIt.step3": "Onboarding y Acompañamiento",
+    "howWeDoIt.step3.desc": "Aseguramos una integración rápida, sin fricciones y con seguimiento constante.",
+    "howWeDoIt.step4": "Ejecución y Soporte",
+    "howWeDoIt.step4.desc": "Desarrollamos, optimizamos e iteramos en soluciones con metodologías ágiles y acompañamiento continuo.",
+    "howWeDoIt.step5": "Retroalimentación",
+    "howWeDoIt.step5.desc": "Recogemos feedback, medimos resultados y ajustamos para seguir aportando valor real al negocio.",
 
     // Success Cases
-    "successCases.title": "Casos de Éxito",
-    "successCases.subtitle": "Nuestro Trabajo Habla por Sí Mismo",
-    "successCases.project1": "Plataforma de E-commerce",
+    "successCases.title": "Confían en nosotros",
+    "successCases.subtitle": "Empresas que eligen nuestro modelo de colaboración estratégica",
+    "successCases.project1": "Qira Global",
     "successCases.project1.desc": "Una solución completa de compras en línea con procesamiento de pagos integrado.",
-    "successCases.project2": "App de Salud",
-    "successCases.project2.desc": "Aplicación móvil para gestión de pacientes y telemedicina.",
-    "successCases.project3": "Dashboard Financiero",
-    "successCases.project3.desc": "Panel de análisis en tiempo real para visualización de datos financieros.",
+    "successCases.project2": "Join Ready",
+    "successCases.project2.desc": "Plataforma diseñada para vincular exitosamente a profesionales con compañías de alto nivel.",
+    "successCases.project3": "Open Labs Latam",
+    "successCases.project3.desc": "Intranet especializada en la gestión integral de personal y en la toma de decisiones inteligentes basadas en IA.",
 
+  
     // About Us
-    "aboutUs.title": "Sobre Nosotros",
-    "aboutUs.subtitle": "Nuestra Historia y Misión",
+    "aboutUs.title": "Sobre Cosmind",
+    "aboutUs.subtitle": "Talento, tecnologia y equipos comprometidos.",
     "aboutUs.story":
-      "Fundada en 2020, Cosmind ha crecido hasta convertirse en un equipo de apasionados creadores digitales. Creemos en usar la tecnología para resolver problemas del mundo real y crear experiencias significativas.",
+      `Cosmind nació en 2020 con la visión de ser un socio estratégico para las empresas que buscan crecer con flexibilidad y calidad. Reunimos expertos en programación, marketing y tecnología para construir equipos y soluciones que realmente funcionan.
+      Combinamos la agilidad de una startup con la calidad de una gran consultora, ofreciendo tanto profesionales expertos como soluciones integrales.
+      Creemos en las personas, no solo en los recursos. Por eso combinamos talento de primer nivel, agilidad operativa y un acompañamiento cercano para impulsar resultados sostenibles.`,
     "aboutUs.mission":
-      "Nuestra misión es ayudar a las empresas a prosperar en la era digital proporcionando soluciones tecnológicas innovadoras y de alta calidad.",
+      "Nuestra misión es innovar con excelencia, siempre para los clientes.",
     "aboutUs.values": "Nuestros Valores",
-    "aboutUs.value1": "Innovación",
-    "aboutUs.value2": "Calidad",
-    "aboutUs.value3": "Colaboración",
-    "aboutUs.value4": "Integridad",
-
+    "aboutUs.value1": "Respeto",
+    "aboutUs.value2": "Confianza",
+    "aboutUs.value3": "Responsabilidad",
+    "aboutUs.value4": "Empatia",
+    "aboutUs.desc1": "Repetamos nuevas ideas y tecnologías para mantenernos a la vanguardia.",
+    "aboutUs.desc2": "Tomamos los proyectos de nuestros clientes como propios.",
+    "aboutUs.desc3": "Trabajamos juntos para lograr objetivos comunes.",
+    "aboutUs.desc4": "Actuamos con honestidad y transparencia.",
+  
     // Your Career
-    "career.title": "Tu Carrera",
-    "career.subtitle": "Únete a Nuestro Equipo de Innovadores",
+    "career.title": "Forma parte de Cosmind",
+    "career.subtitle": "Sumate si te mueve la innovación y el trabajo en equipo",
     "career.description":
-      "Siempre estamos buscando personas talentosas para unirse a nuestro equipo. Si te apasiona la tecnología y la innovación, nos encantaría saber de ti.",
-    "career.openings": "Vacantes Actuales",
-    "career.position1": "Desarrollador Frontend",
-    "career.position2": "Diseñador UX/UI",
-    "career.position3": "Desarrollador Móvil",
-    "career.applyBtn": "Aplicar Ahora",
-
+      "Buscamos personas con actitud, iniciativa y pasión por la tecnología. Si te interesa formar parte de un entorno flexible, multicultural y orientado a crear impacto real, estamos deseando conocerte.",
+    "career.openings": "Vacantes disponibles",
+    "career.position1": "Frontend Developer",
+    "career.position2": "UX/UI Designer",
+    "career.position3": "Mobile Developer",
+    "career.applyBtn": "Aplica ahora",
+  
     // Contact
-    "contact.title": "Ponte en Contacto",
-    "contact.subtitle": "Iniciemos una Conversación",
+    "contact.title": "Contáctanos",
+    "contact.subtitle": "Permítenos ser tu próximo socio digital y llevar tu proyecto al siguiente nivel.",
     "contact.name": "Nombre",
-    "contact.email": "Correo Electrónico",
+    "contact.email": "Correo electrónico",
     "contact.message": "Mensaje",
-    "contact.send": "Enviar Mensaje",
+    "contact.send": "Enviar",
 
     // Footer
     "footer.followUs": "Síguenos",
-    "footer.rights": "Todos los derechos reservados.",
+    "footer.rights": "Cosmind Group @2025 - Todos los derechos reservados."
+
+  
   },
 }
 

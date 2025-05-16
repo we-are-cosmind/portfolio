@@ -1,12 +1,15 @@
 "use client"
 
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
+
+import { AlertCircle, CheckCircle2 } from "lucide-react"
+import { useRef, useState } from "react"
+
 import { Button } from "@/components/ui/button"
+import emailjs from 'emailjs-com';
+import { useForm } from "react-hook-form"
 import { useLanguage } from "@/contexts/language-context"
-import { CheckCircle2, AlertCircle } from "lucide-react"
+import { zodResolver } from "@hookform/resolvers/zod"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -20,6 +23,7 @@ export default function ContactForm() {
   const { t } = useLanguage()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle")
+  const formRef = useRef<HTMLFormElement | null>(null);  // Referencia al formulario
 
   const {
     register,
@@ -31,26 +35,29 @@ export default function ContactForm() {
   })
 
   const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      // Usa emailjs.sendForm para enviar el formulario
+      if (formRef.current) {
+        const result = await emailjs.sendForm(
+          'YOUR_SERVICE_ID', // Reemplaza con tu servicio de EmailJS
+          'YOUR_TEMPLATE_ID', // Reemplaza con tu ID de plantilla de EmailJS
+          formRef.current // Referencia directa al formulario
+        );
 
-      // Success
-      setFormStatus("success")
-      reset()
-
-      // Reset form status after 5 seconds
-      setTimeout(() => {
-        setFormStatus("idle")
-      }, 5000)
+        console.log('SUCCESS!', result.text);
+        setFormStatus('success');
+        reset();
+        setTimeout(() => setFormStatus('idle'), 5000);
+      }
     } catch (error) {
-      setFormStatus("error")
+      console.log('FAILED...', error);
+      setFormStatus('error');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <div className="relative">

@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { X } from "lucide-react"
+import { useEffect, useState } from "react"
+
 import { Button } from "@/components/ui/button"
+import { X } from "lucide-react"
 
 interface CalendlyModalProps {
   isOpen: boolean
@@ -45,7 +46,7 @@ export default function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
         </Button>
 
         <iframe
-          src="https://calendly.com/cosmind/30min"
+          src="https://calendly.com/services-wearecosmind"
           width="100%"
           height="100%"
           frameBorder="0"
