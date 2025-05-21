@@ -392,7 +392,7 @@ export default function Home() {
             <div className="flex items-center gap-4">
               <span className="text-white">{t("footer.followUs")}:</span>
               <a
-                href="https://www.instagram.com/cosmind"
+                href="https://www.instagram.com/we.are.cosmind"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-navy-300 transition-colors"
