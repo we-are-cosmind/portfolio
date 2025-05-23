@@ -106,6 +106,12 @@ const translations = {
     // Footer
     "footer.followUs": "Follow Us",
     "footer.rights": "All rights reserved.",
+
+    // Email
+    "email.sent": "Message Sent",
+    "email.thanks": "Thank you for contacting us. We will get back to you soon.",
+    "email.sendAgain": "Send Another Message",
+    "email.error": "Error Sending Message",
   },
   es: {
     // Navbar
@@ -204,9 +210,14 @@ const translations = {
 
     // Footer
     "footer.followUs": "Síguenos",
-    "footer.rights": "Cosmind Group @2025 - Todos los derechos reservados."
+    "footer.rights": "Cosmind Group @2025 - Todos los derechos reservados.",
 
-  
+    // Email
+    "email.sent": "Mensaje Enviado",
+    "email.thanks": "Gracias por contactarnos. Te responderemos pronto.",
+    "email.sendAgain": "Enviar Otro Mensaje",
+    "email.error": "Hubo un error al enviar tu mensaje. Por favor, intenta de nuevo.",
+
   },
 }
 
