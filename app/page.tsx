@@ -235,7 +235,7 @@ export default function Home() {
         </div>
       </section>
 {/* Trusted By Section */}
-<section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+<section id="clients" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
   <div className="max-w-7xl mx-auto text-center">
     <FadeIn>
       <h2 className="text-4xl font-bold text-navy-900 mb-4">{t("successCases.title")}</h2>
@@ -415,7 +415,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/company/cosmind"
+                href="https://www.linkedin.com/in/cosmind-it-partner/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-navy-300 transition-colors"

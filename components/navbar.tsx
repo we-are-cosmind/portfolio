@@ -20,7 +20,7 @@ export default function Navbar({ openCalendly }: NavbarProps) {
   const navItems = [
     { name: t("nav.whatWeDo"), href: "#what-we-do" },
     { name: t("nav.howWeDoIt"), href: "#how-we-do-it" },
-    { name: t("nav.successCases"), href: "#success-cases" },
+    { name: t("nav.successCases"), href: "#clients" },
     { name: t("nav.aboutUs"), href: "#about-us" },
     { name: t("nav.yourCareer"), href: "#your-career" },
   ]

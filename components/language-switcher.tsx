@@ -64,7 +64,7 @@ export default function LanguageSwitcher() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/company/cosmind"
+                href="https://www.linkedin.com/in/cosmind-it-partner/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-navy-300 transition-colors"
